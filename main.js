@@ -1,6 +1,11 @@
-function convert(){
-var src = document.getElementById('source').value.replace(/^\s*[\r\n]/gm,'').trim();
-var lines = src.split('\n').filter(Boolean);
+async function convert(){
+var file = document.getElementById("m3u").files[0];
+if (file) {
+    var reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function (evt) {
+        var src = evt.target.result;
+        var lines = src.split('\n').filter(Boolean);
 length=lines.length;
 digits=((length-1)/2).toString().length;
 var dest = document.getElementById('dest');
@@ -22,6 +27,13 @@ for(let i = 1;i < length-1;i+=2){
     result = result + separator + line.substring(line.indexOf(",") + 1) +'\n';
 }
 dest.value=result;
+return true;
+    }
+    reader.onerror = function (evt) {
+        alert('Error reading file!');
+        return false;
+    }
+}else{alert('No file selected!');return false;}
 }
 function copyResult(button)
 {
@@ -30,3 +42,4 @@ function copyResult(button)
     button.innerHTML = 'Copied!';
     setTimeout(function(){button.innerHTML='Copy result';},1000);
 }
+

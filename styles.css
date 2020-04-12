@@ -5,6 +5,9 @@
 body{
 	text-align:center;
 	font-family: monospace;
+	background-repeat: repeat;
+	background-image: url('bg.png');
+	background-position: fixed
 }
 h1{
 	margin: 0.5em;
@@ -14,9 +17,9 @@ h1{
 }
 #middle{
 	display: inline-block;
-	margin:auto 1.5em;
+	margin:auto 4em;
 	line-height: 1.3em;
-	max-width:11em;
+	max-width:20em;
 }
 textarea{
 	padding:0.2em;

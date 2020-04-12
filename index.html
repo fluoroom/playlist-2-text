@@ -10,16 +10,8 @@
 <body>
 	<div id="wrap">
 	<h1>M3U to text converter</h1>
-	<textarea id="source" cols="70" rows="40" placeholder="#EXTM3U
-#EXTINF:370,ANNA - Portable Paradise
-C:\Users\John\Music\01 - Portable Paradise.mp3
-#EXTINF:452,Timothy Clerkin - Unborn
-C:\Users\John\Music\Unborn.mp3
-#EXTINF:389,Simone Tavazzi - Cellar
-C:\Users\John\Music\01 - Cellar.mp3
-#EXTINF:377,Industrialyzer - Balanced Motions
-C:\Users\John\Music\01 - Balanced Motions.mp3"></textarea><div id="middle">
-		<p><--------<br>open your M3U file on a notepad and copy its contents here<br><--------</p>
+	<div id="middle">
+		<p><input type="file" accept=".m3u,.m3u8" name="m3u" id="m3u"></p>
 		<form><p>
 		<input type="checkbox" id="numbers" name="numbers"> <label for="numbers">Track numbers</label>
 		<br><input type="checkbox" id="zeros" name="zeros"> <label for="zeros">Add zeros to numbers</label>
