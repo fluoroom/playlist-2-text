@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>M3U --> text</title>
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+<body>
+	<div id="wrap">
+	<h1>M3U to text converter</h1>
+	<textarea id="source" cols="70" rows="40" placeholder="#EXTM3U
+#EXTINF:370,ANNA - Portable Paradise
+C:\Users\John\Music\01 - Portable Paradise.mp3
+#EXTINF:452,Timothy Clerkin - Unborn
+C:\Users\John\Music\Unborn.mp3
+#EXTINF:389,Simone Tavazzi - Cellar
+C:\Users\John\Music\01 - Cellar.mp3
+#EXTINF:377,Industrialyzer - Balanced Motions
+C:\Users\John\Music\01 - Balanced Motions.mp3"></textarea><div id="middle">
+		<p><--------<br>open your M3U file on a notepad and copy its contents here<br><--------</p>
+		<form><p>
+		<input type="checkbox" id="numbers" name="numbers"> <label for="numbers">Track numbers</label>
+		<br><input type="checkbox" id="zeros" name="zeros"> <label for="zeros">Add zeros to numbers</label>
+		</p><p>
+		<label for="separator">Separator:</label><br><input type="text" size="5" name="separator" id="separator"></p><p>
+	<button type="button" onclick="convert()"><b>Convert</b></button></p>
+	<p><button type="button" id="copybutton" onclick="copyResult(this)">Copy result</button></p>
+	</form></div>
+	<textarea id="dest" cols="70" rows="40" placeholder="ANNA - Portable Paradise
+Timothy Clerkin - Unborn
+Simone Tavazzi - Cellar
+Industrialyzer - Balanced Motions"></textarea>
+	<script type="text/javascript" src="main.js"></script>
+	<p><b>Separator:</b> Insert characters between numbers and tracks. At least a space is recommended.<br> Insert at the beggining of lines if not using numbers. Be careful of unwanted spaces.</p>
+</div>
+</body>
+</html>
