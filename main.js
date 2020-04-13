@@ -1,7 +1,9 @@
-sentenceCase = (str) => str[0].toUpperCase() + str.slice(1).toLowerCase();
+sentenceCase = (str) => str[0].toUpperCase() + str.slice(1);
 convertSentence = (sentence) => sentence.split(' ').map(sentenceCase).join(' ');
 
 async function convert(){
+var warning = document.getElementById('warning');
+warning.style.display='none';
 var file = document.getElementById("file").files[0];
 var ext =file.name.split('.').pop().toLowerCase();
 if (file) {
@@ -42,25 +44,30 @@ if (file) {
             if(showsep.checked==true){result+=separator;}
             if(numbers.checked==true && showsep.checked==false){result+=' ';}
             if(!song.title==0){
+                let songTitle = song.title.trim();
+                if (capit.checked) {songTitle = convertSentence(songTitle);}
             if(artist.checked==true&&!song.artist==0){
+                let songArtist = song.artist.trim();
+                if (capit.checked) {songArtist = convertSentence(songArtist);}
                 if(order==2){
-                result+=song.title.trim()+' - '+song.artist.trim();
+                result+=songTitle+' - '+songArtist;
             }else{
-                result+=song.artist.trim()+' - '+song.title.trim();
+                result+=songArtist+' - '+songTitle;
             }}else{
             result+=song.title;}}else{
                 // if no title
-                
+                warning.style.display='inline-block';
                 var filename =song.file.split('.');
                 filename.pop()
                 filename = filename.toString().split('\\').pop().split('/').pop().replace('_',' ');
-                filename = convertSentence(filename).trim();
+                if (capit.checked) {filename = convertSentence(filename);}
+                filename.trim();
                 result+=filename;
 
             }
 
 
-            result = result+'\n';
+            result +='\n';
                 /* end for */ }
 dest.value=result;
 return true;

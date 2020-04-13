@@ -11,6 +11,7 @@
 	<header><h1>Playlist to text converter</h1>
 	<h2>Reads .M3U, .M3U8, .PLS and .ASX</h2></header>
 	<div id="controls">
+		<div id="warning"><p><b>Warning</b><br>Some songs with missing title.<br>Filenames were used instead.</p></div>
 		<p><input type="file" accept=".m3u,.m3u8,.pls,.asx" name="file" id="file"></p>
 		<form><p>
 		<input type="checkbox" id="artist" name="artist" checked> <label for="artist">Show artist if available</label><br>
@@ -21,10 +22,10 @@
 		</select> 
 		<br><input type="checkbox" id="numbers" name="numbers"> <label for="numbers">Track numbers</label>
 		<br><input type="checkbox" id="zeros" name="zeros"> <label for="zeros">Add zeros to numbers</label>
-		<br><input type="checkbox" id="capit" name="capit"> <label for="capit">Capitalize if using filenames as titles</label>
+		<br><input type="checkbox" id="capit" name="capit"> <label for="capit">Capitalize</label>
 		<br><input type="checkbox" id="showsep" name="showsep"> <label for="showsep">Use separator</label><br>
 		<label for="separator">Separator:</label> <input type="text" size="5" name="separator" onchange="sepexample(this)" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" id="separator" value=" - "> 06<span id="sepexample"> - </span>Let It Be</p><p>
-	<button type="button" onclick="convert()"><b>Convert</b></button><div id="warning"><p><b>Warning:</b> some songs with missing metadata, filenames were used instead.</p></div></p>
+	<button type="button" onclick="convert()"><b>Convert</b></button></p>
 	<p><button type="button" id="copybutton" onclick="copyResult(this)">Copy result</button></p>
 	</form></div>
 	<textarea id="dest" cols="70" rows="40" placeholder="ANNA - Portable Paradise
@@ -33,8 +34,7 @@ Simone Tavazzi - Cellar
 Industrialyzer - Balanced Motions"></textarea>
 	<script type="text/javascript" src="parser.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
-	<p><b>Separator:</b> Insert characters between numbers and tracks. At least a space is recommended.<br> Insert at the beggining of lines if not using numbers. Be careful of unwanted spaces.</p>
-	<p>Filenames will act as titles if not metadata is present.</p>
+	<p>Filenames will act as titles if not metadata is present.<br>Underscores in filenames will be converted to spaces.</p>
 	<p>Download for offline use: <a href="https://github.com/fluoroom/m3u-2-text/archive/master.zip">https://github.com/fluoroom/m3u-2-text/archive/master.zip</a></p>
 	<p>GitHub repo: <a href="https://github.com/fluoroom/m3u-2-text/">https://github.com/fluoroom/m3u-2-text/</a></p>
 	<p><a href="http://casfoust.cf/">casfoust - dj & producer</a>
