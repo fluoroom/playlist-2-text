@@ -5,3 +5,5 @@ This for example lets DJs get their played songs history fron Rekordbox, Serato,
 
 Works on any web browser: just download all the files and open index.html if needed offline.
 Or use it online at https://fluoroom.github.io/m3u-2-text/
+
+Not working with Traktor nor Virtual DJ for the moment.
