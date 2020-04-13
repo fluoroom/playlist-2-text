@@ -5,9 +5,7 @@
 body{
 	text-align:center;
 	font-family: monospace;
-	background-repeat: repeat;
-	background-image: url('bg.png');
-	background-position: fixed
+	background-color:#cdf;
 }
 h1{
 	margin: 0.5em;
