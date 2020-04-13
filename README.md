@@ -5,6 +5,6 @@ This (for example) lets DJs get their played songs history fron Rekordbox, Serat
 
 For offline use just download all the files to a folder and open index.html on any web browser.
 
-Or use it online at https://fluoroom.github.io/m3u-2-text/
+Or use it online at https://fluoroom.github.io/playlist-2-text/
 
 Uses the javascript playlist parser by Nick Desaulniers: https://github.com/nickdesaulniers/javascript-playlist-parser
