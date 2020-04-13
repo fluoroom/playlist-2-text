@@ -37,10 +37,12 @@ form{
 }
 p{
 	margin-top:1.5em;
+	line-height: 1.5em;
 }
 button{
 	padding:0.5em 1em;
 	display: inline-block;
+	vertical-align: text-bottom;
 }
 ul{
 	text-align: left;
