@@ -1,8 +1,8 @@
 sentenceCase = (str) => str[0].toUpperCase() + str.slice(1);
 convertSentence = (sentence) => sentence.split(' ').map(sentenceCase).join(' ');
-
-async function convert(){
+var dest = document.getElementById('dest');
 var warning = document.getElementById('warning');
+async function convert(){
 warning.style.display='none';
 var file = document.getElementById("file").files[0];
 var ext =file.name.split('.').pop().toLowerCase();
@@ -10,7 +10,6 @@ if (file) {
     var reader = new FileReader();
     reader.readAsText(file);
     reader.onload = function (evt) {
-        var dest = document.getElementById('dest');
         var numbers = document.getElementById('numbers');
         var zeros = document.getElementById('zeros');
         var artist = document.getElementById('artist');
@@ -61,12 +60,10 @@ if (file) {
                 filename.pop()
                 filename = filename.toString().split('\\').pop().split('/').pop().replace('_',' ');
                 if (capit.checked) {filename = convertSentence(filename);}
-                filename.trim();
+                filename = filename.trim();
                 result+=filename;
 
             }
-
-
             result +='\n';
                 /* end for */ }
 dest.value=result;

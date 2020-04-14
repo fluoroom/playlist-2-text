@@ -9,14 +9,14 @@ body{
 	background-color:#def;
 }
 header{
-	margin: 0.5em auto 1.5em auto;
+	margin: 1.5em auto 1.5em auto;
 }
 header h2{
 	font-weight: normal;
 	font-size:1.2em;
 }
 #wrap{
-	margin:1em auto;
+	margin:0 auto;
 }
 #controls{
 	display: inline-block;
@@ -24,6 +24,9 @@ header h2{
 	line-height: 1.3em;
 	text-align: left;
 	min-width: 22em;
+}
+#textareacont{
+	display: inline-block;
 }
 textarea{
 	padding:0.2em;
@@ -50,7 +53,7 @@ ul{
 	max-width: 40em;
 }
 #warning{
-	margin-bottom: 10em;
+	margin-bottom:6.5em;
 	display: none;
 	max-width: 22em;
 	color:#b00;

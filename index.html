@@ -27,11 +27,10 @@
 		<label for="separator">Separator:</label> <input type="text" size="4" name="separator" onchange="sepexample(this)" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" id="separator" value=" - "> 06<span id="sepexample"> - </span>Let It Be</p><p>
 	<button type="button" onclick="convert()"><b>Convert</b></button></p>
 	<p><button type="button" id="copybutton" onclick="copyResult(this)">Copy result</button></p>
-	</form></div>
-	<textarea id="dest" cols="70" rows="40" placeholder="ANNA - Portable Paradise&#13;&#10;
+	</form></div><div id="textareacont"><textarea id="dest" cols="70" rows="40" placeholder="ANNA - Portable Paradise&#13;&#10;
 Timothy Clerkin - Unborn&#13;&#10;
 Simone Tavazzi - Cellar&#13;&#10;
-Industrialyzer - Balanced Motions"></textarea>
+Industrialyzer - Balanced Motions"></textarea></div>
 	<script type="text/javascript" src="parser.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
 	<p>Filenames will act as titles if no metadata is found.<br>Underscores in filenames will be converted to spaces.</p>
