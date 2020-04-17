@@ -3,7 +3,7 @@ This tool converts any M3U, M3U8, PLS or ASX file to a list of songs that can th
 
 This (for example) lets DJs get their played songs history fron Rekordbox, Serato, Traktor or VirtualDJ and rapidly have the list in text format for posting when uploading a recorded set to social media or for any other purpose.
 
-For offline use just download all the files to a folder and open index.html on any web browser.
+For offline use download ALL the files to a folder and open index.html on any web browser.
 
 Or use it online at https://fluoroom.github.io/playlist-2-text/
 
