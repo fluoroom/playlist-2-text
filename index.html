@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Playlist to text converter - Tracklist generator</title>
@@ -10,10 +10,10 @@
 	<div id="wrap">
 	<header><h1>Playlist to text converter</h1>
 	<h2>Reads .M3U, .M3U8, .PLS and .ASX</h2></header>
-	<div id="controls">
-		<div id="warning"><p><b>Warning</b><br>Some songs with missing title.<br>Filenames were used instead.</p></div>
+	<section id="app">
+		<div id="controls"><form>
 		<p><input type="file" accept=".m3u,.m3u8,.pls,.asx" name="file" id="file"></p>
-		<form><p>
+		<p>
 		<input type="checkbox" id="artist" name="artist" checked> <label for="artist">Show artist if available</label><br>
 		<label for="order">Order:</label>
 		<select id="order">
@@ -27,16 +27,13 @@
 		<label for="separator">Separator:</label> <input type="text" size="4" name="separator" onchange="sepexample(this)" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" id="separator" value=" - "> 06<span id="sepexample"> - </span>Let It Be</p><p>
 	<button type="button" onclick="convert()"><b>Convert</b></button></p>
 	<p><button type="button" id="copybutton" onclick="copyResult(this)">Copy result</button></p>
-	</form></div><div id="textareacont"><textarea id="dest" cols="70" rows="40" placeholder="ANNA - Portable Paradise&#13;&#10;
-Timothy Clerkin - Unborn&#13;&#10;
-Simone Tavazzi - Cellar&#13;&#10;
-Industrialyzer - Balanced Motions"></textarea></div>
+	</form><div id="warning"><p><b>Warning</b><br>Some songs with missing title.<br>Filenames were used instead.</p></div></div><div id="textareacont"><textarea id="dest" placeholder="ANNA - Portable Paradise&#13;&#10;Timothy Clerkin - Unborn&#13;&#10;Simone Tavazzi - Cellar&#13;&#10;Industrialyzer - Balanced Motions"></textarea></div>
 	<script type="text/javascript" src="parser.min.js"></script>
-	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="main.js"></script></section><section id="text">
 	<p>Filenames will act as titles if no metadata is found.<br>Underscores in filenames will be converted to spaces.</p>
 	<p>Download for offline use: <a href="https://github.com/fluoroom/playlist-2-text/archive/master.zip">https://github.com/fluoroom/playlist-2-text/archive/master.zip</a></p>
-	<p>GitHub repository: <a href="https://github.com/fluoroom/playlist-2-text/">https://github.com/fluoroom/playlist-2-text/</a></p>
-	<p><a href="http://casfoust.cf/">casfoust - dj & producer</a>
+	<p>GitHub repository: <a href="https://github.com/fluoroom/playlist-2-text/">https://github.com/fluoroom/playlist-2-text/</a></p></section>
+	<footer><p><a href="http://casfoust.cf/">casfoust - dj & producer</a></p></footer>
 </div>
 </body>
 </html>

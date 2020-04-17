@@ -44,10 +44,8 @@ if (file) {
             if(numbers.checked==true && showsep.checked==false){result+=' ';}
             if(!song.title==0){
                 let songTitle = song.title.trim();
-                if (capit.checked) {songTitle = convertSentence(songTitle);}
             if(artist.checked==true&&!song.artist==0){
                 let songArtist = song.artist.trim();
-                if (capit.checked) {songArtist = convertSentence(songArtist);}
                 if(order==2){
                 result+=songTitle+' - '+songArtist;
             }else{
@@ -59,13 +57,13 @@ if (file) {
                 var filename =song.file.split('.');
                 filename.pop()
                 filename = filename.toString().split('\\').pop().split('/').pop().replace('_',' ');
-                if (capit.checked) {filename = convertSentence(filename);}
                 filename = filename.trim();
                 result+=filename;
 
             }
             result +='\n';
                 /* end for */ }
+if (capit.checked) {result = convertSentence(result);}
 dest.value=result;
 return true;
     }
