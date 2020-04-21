@@ -6,7 +6,18 @@
 body{
 	text-align:center;
 	font-family: monospace;
-	background-color:#def;
+}
+#bgwrap {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size:500px;
+    background-repeat: repeat;
+    background-image: url('bg.png');
+    background-attachment: fixed;
 }
 header{
 	margin: 2em auto 3em auto;
@@ -18,15 +29,24 @@ header h2{
 #wrap{
 	margin:0 auto;
 }
+#file{
+
+}
 #controls{
 	display: inline-block;
 	margin:auto 1em;
 	line-height: 1.3em;
-	text-align: left;
+	text-align: center;
 	min-width: 22em;
 	vertical-align: top;
 	height:420px;
 	position:relative;
+	border:1px solid rgba(0,0,0,0.6);
+	background-color: rgba(255,255,255,0.65)
+}
+form{
+	padding:1em 1em 0.7em 1em;
+	text-align: left
 }
 footer{
 	margin-bottom: 3em;
@@ -39,6 +59,8 @@ textarea{
 	padding:0.2em;
 	height:100%;
 	width:440px;
+	border:1px solid rgba(0,0,0,0.6);
+	background-color: rgba(255,255,255,0.65);
 }
 textarea::placeholder{
 	color:#999;
@@ -52,6 +74,13 @@ button{
 	padding:0.5em 1em;
 	display: inline-block;
 	vertical-align: text-bottom;
+	background-color: rgba(0,0,0,0.9);
+	border:0px solid black;
+	color:#fff;
+	font-family: monospace;
+}
+button:hover{
+	background-color: rgba(0,0,0,1);
 }
 ul{
 	text-align: left;
@@ -64,19 +93,17 @@ ul{
 	color:#b00;
 	background-color: rgba(255,255,255,0.3);
 	padding:1em;
-	border:1px dotted rgba(0,0,0,0.3);
+	border:1px dotted rgba(0,0,0,0.7);
 	text-align: center;
-	position:absolute;
-	bottom:0;
+	margin:auto;
 }
 #warning p{
 	display: inline;
 }
 #app{
 	margin:0 auto 3em auto;
-	max-width:768px;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
 	#app{
 		max-width: 90%;
 		margin: auto;
@@ -85,7 +112,6 @@ ul{
 		height:100%;
 		margin:auto;
 		text-align: center;
-		min-width:80%;
 	}
 	form{
 		text-align: left;
@@ -97,11 +123,12 @@ ul{
 	}
 	#warning{
 		text-align:center;
-		margin: auto;
+		margin: auto auto 0.7em auto;
 		position: relative;
 	}
 	textarea{
-		width:100%;
+		width:80%;
+		background-color: rgba(255,255,255,0.5)
 	}
 	#text{
 		max-width: 90%;
@@ -111,5 +138,8 @@ ul{
 @media (max-width: 420px){
 	h1{
 		font-size: 1.7em;
+	}
+	textarea{
+		width: 100%;
 	}
 }

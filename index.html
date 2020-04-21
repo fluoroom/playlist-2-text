@@ -7,12 +7,13 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<div id="bgwrap"></div>
 	<div id="wrap">
 	<header><h1>Playlist to text converter</h1>
 	<h2>Reads .M3U, .M3U8, .PLS and .ASX</h2></header>
 	<section id="app">
 		<div id="controls"><form>
-		<p><input type="file" accept=".m3u,.m3u8,.pls,.asx" name="file" id="file"></p>
+		<p><input id="file" type="file" accept=".m3u,.m3u8,.pls,.asx" name="file" id="file"></p>
 		<p>
 		<input type="checkbox" id="artist" name="artist" checked> <label for="artist">Show artist if available</label><br>
 		<label for="order">Order:</label>
