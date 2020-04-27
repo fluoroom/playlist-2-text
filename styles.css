@@ -101,7 +101,7 @@ ul{
 	display: inline;
 }
 #app{
-	margin:0 auto 3em auto;
+	margin:0 auto 1.5em auto;
 }
 @media (max-width: 768px) {
 	#app{
