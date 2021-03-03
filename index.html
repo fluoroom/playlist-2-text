@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Playlist to text converter - Tracklist generator</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="bgwrap"></div>
+	<div id="wrap">
+	<header><h1>Playlist to text converter</h1>
+	<h2>Reads .M3U, .M3U8, .PLS and .ASX</h2></header>
+	<section id="app">
+		<div id="controls"><form>
+		<p><input id="file" type="file" accept=".m3u,.m3u8,.pls,.asx" name="file" id="file"></p>
+		<p>
+		<input type="checkbox" onchange="sepexample()" id="artist" name="artist" checked> <label for="artist">Show artist if available</label><br>
+		<label for="order">Order:</label>
+		<select onchange="sepexample()" id="order">
+		  <option value="1">artist - title</option>
+		  <option value="2">title - artist</option>
+		</select> 
+		<br><input type="checkbox" onchange="sepexample()" id="numbers" name="numbers"> <label for="numbers">Track numbers</label>
+		<br><input type="checkbox" onchange="sepexample()" id="pad" name="pad" checked> <label for="zeros">Pad numbers</label>
+		<br><input type="checkbox" onchange="sepexample()" id="capit" name="capit"> <label for="capit">Capitalize</label><br>
+		<label for="numSeparator">Number separator:</label> <input type="text" size="4" name="separator" onchange="sepexample()" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" id="numSeparator" value=" - "><br>
+		<label for="artSeparator">Artist separator:</label> <input type="text" size="4" name="artSeparator" onchange="sepexample()" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" id="artSeparator" value=" - "><br>
+		<span style="opacity:0.6;">Example:</span></p>
+		<pre id="sepexample"></pre>
+		<p><button type="button" onclick="convert()"><b>Convert</b></button></p>
+	<p><button type="button" id="copybutton" onclick="copyResult(this)">Copy result</button></p>
+	</form><div id="warning"><p><b>Warning</b><br>Some songs with missing title.<br>Filenames were used instead.</p></div></div><div id="textareacont"><textarea id="dest" placeholder="ANNA - Portable Paradise&#13;&#10;Timothy Clerkin - Unborn&#13;&#10;Simone Tavazzi - Cellar&#13;&#10;Industrialyzer - Balanced Motions"></textarea></div></section>
+	<script type="text/javascript" src="parser.min.js"></script>
+	<script type="text/javascript" src="main.js"></script></section><section id="text">
+	<p>Filenames will act as titles if no metadata is found.<br>Underscores in filenames will be converted to spaces.</p>
+	<p>Download for offline use: <a href="https://github.com/fluoroom/playlist-2-text/archive/master.zip">https://github.com/fluoroom/playlist-2-text/archive/master.zip</a></p>
+	<p>GitHub repository: <a href="https://github.com/fluoroom/playlist-2-text/">https://github.com/fluoroom/playlist-2-text/</a></p></section>
+	<footer><p><a href="http://casfoust.cf/">casfoust - dj & producer</a></p></footer>
+</div>
+</body>
+</html>
