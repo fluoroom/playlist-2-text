@@ -17,7 +17,7 @@ body{
     background-size:500px;
     background-repeat: repeat;
     background-image: url('bg.png');
-    background-attachment: fixed;
+	background-attachment: fixed;
 }
 header{
 	margin: 2em auto 3em auto;
@@ -30,19 +30,19 @@ header h2{
 	margin:0 auto;
 }
 #file{
-
+	max-width: 20em;
 }
 #controls{
 	display: inline-block;
 	margin:auto 1em;
 	line-height: 1.3em;
 	text-align: center;
-	min-width: 22em;
 	vertical-align: top;
 	height:420px;
 	position:relative;
 	border:1px solid rgba(0,0,0,0.6);
 	background-color: rgba(255,255,255,0.65)
+	position:relative;
 }
 form{
 	padding:1em 1em 0.7em 1em;
@@ -89,19 +89,25 @@ ul{
 }
 #warning{
 	display: none;
-	max-width: 22em;
+	max-width: 25em;
 	color:#b00;
 	background-color: rgba(255,255,255,0.3);
 	padding:1em;
 	border:1px dotted rgba(0,0,0,0.7);
-	text-align: center;
 	margin:auto;
+	text-align: left;
+	position:absolute;
+	bottom:1em;
+	right:1em;
 }
 #warning p{
 	display: inline;
 }
 #app{
 	margin:0 auto 1.5em auto;
+}
+#sepexample{
+	margin:-1.5em 0em 1.5em 0em;
 }
 @media (max-width: 768px) {
 	#app{
@@ -122,7 +128,7 @@ ul{
 		height:200px;
 	}
 	#warning{
-		text-align:center;
+		text-align:left;
 		margin: auto auto 0.7em auto;
 		position: relative;
 	}
