@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
 body{
 	text-align:center;
-	font-family: Roboto Mono, monospace;
+	font-family: 'Roboto Mono', monospace;
 }
 #bgwrap {
     z-index: -1;
