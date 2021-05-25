@@ -3,9 +3,10 @@
 	padding:0;
 	box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&display=swap');
 body{
 	text-align:center;
-	font-family: monospace;
+	font-family: Roboto Mono, monospace;
 }
 #bgwrap {
     z-index: -1;
@@ -41,8 +42,8 @@ header h2{
 	height:420px;
 	position:relative;
 	border:1px solid rgba(0,0,0,0.6);
-	background-color: rgba(255,255,255,0.65)
-	position:relative;
+	background-color: rgba(255,255,255,0.65);
+	position: relative;
 }
 form{
 	padding:1em 1em 0.7em 1em;
