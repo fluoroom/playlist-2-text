@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # playlist-2-text
 This tool converts any M3U, M3U8, PLS or ASX file to a list of songs that can then be numbered and capitalized.
 
