@@ -7,6 +7,7 @@
 body{
 	text-align:center;
 	font-family: 'Roboto Mono', monospace;
+	font-size: 14px;;
 }
 #bgwrap {
     z-index: -1;
@@ -32,6 +33,10 @@ header h2{
 }
 #file{
 	max-width: 20em;
+	font-family: inherit;
+}
+#order{
+	font-family: inherit;
 }
 #controls{
 	display: inline-block;
@@ -47,6 +52,7 @@ header h2{
 }
 form{
 	padding:1em 1em 0.7em 1em;
+	font-family: inherit;
 	text-align: left
 }
 footer{
@@ -59,6 +65,8 @@ footer{
 textarea{
 	padding:0.2em;
 	height:100%;
+	font-size: 14px;
+	font-family: inherit;
 	width:440px;
 	border:1px solid rgba(0,0,0,0.6);
 	background-color: rgba(255,255,255,0.65);
@@ -78,7 +86,7 @@ button{
 	background-color: rgba(0,0,0,0.9);
 	border:0px solid black;
 	color:#fff;
-	font-family: monospace;
+	font-family: inherit;
 }
 button:hover{
 	background-color: rgba(0,0,0,1);
@@ -109,6 +117,7 @@ ul{
 }
 #sepexample{
 	margin:-1.5em 0em 1.5em 0em;
+	font-family: inherit;
 }
 @media (max-width: 768px) {
 	#app{
