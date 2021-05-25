@@ -45,6 +45,7 @@ header h2{
 	text-align: center;
 	vertical-align: top;
 	height:420px;
+	min-width: 20em;
 	position:relative;
 	border:1px solid rgba(0,0,0,0.6);
 	background-color: rgba(255,255,255,0.65);
